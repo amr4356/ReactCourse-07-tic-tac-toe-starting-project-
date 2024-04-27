@@ -3,7 +3,13 @@ export default function Player({name,symbol}){
     const [isEditing,setIsEditing]= useState(false);
 
     function handleEditClick(){
-        setIsEditing(!isEditing);
+        //it is not a good practice because when you execute the function you are invoking just the previous state for all the editing functions
+        //setIsEditing(!isEditing); //change state into true
+        //setIsEditing(!isEditing); //change state into true
+        // while here it is a good practice if you want to change the changed state. and it is a recommandation by recat developer
+        //setIsEditing(editing => !editing);
+        //setIsEditing(editing => !editing);
+        setIsEditing(editing => !editing);
     }
 
     let playerName=<span className='player-name'>{name}</span>;
