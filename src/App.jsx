@@ -5,6 +5,7 @@ import Log from "./components/log";
 function App() {
   const [gameTurns,setGameTurns]=useState([]);
   const [activePlayer,setActivePlayer]=useState('X');
+
   function handleSelectSquare(rowIndex,colIndex){
     setActivePlayer((curActivePlayer)=> curActivePlayer==='X' ?'O':'X');
     setGameTurns(prevTurns => {
@@ -29,7 +30,7 @@ function App() {
         </ol>
         <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns}/>
       </div>
-      <Log />
+      <Log turns={gameTurns} />
     </main>
   );
 }
