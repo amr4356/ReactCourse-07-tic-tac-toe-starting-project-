@@ -3,6 +3,8 @@ import Player from "./components/Player";
 import GameBoard from "./components/GameBoard";
 import Log from "./components/log";
 
+import { WINNING_COMBINATIONS } from './Winning-combinations.JS';
+
 
 function deriveActivePlayer(gameTurns){
   let currentPlayer='X';
